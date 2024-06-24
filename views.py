@@ -13,13 +13,13 @@ def BackManage(request):
     print(username0)
     users = UserProfile.objects.exclude(username=username0)  # 获取所有用户信息，排除特定用户
     devices = Device.objects.all()  # 获取所有设备信息
-    for device in devices:
-        if device.state == 0:
-            device.status = '正常'
-        elif device.state == 1:
-            device.status = '故障'
-        else:
-            device.status = '未知'
+    # for device in devices:
+    #     if device.state == 0:
+    #         device.status = '正常'
+    #     elif device.state == 1:
+    #         device.status = '故障'
+    #     else:
+    #         device.status = '未知'
     context = {'users': users, 'devices': devices}  # 数据字典
     return render(request, 'BackManage/chronic.html', context)
 
