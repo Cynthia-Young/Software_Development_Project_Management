@@ -9,5 +9,5 @@ class ShowUser(models.Model):
     is_staff = models.SmallIntegerField(default=0)
 
     class Meta:
-        db_table = '红红火火恍恍惚惚'
+        db_table = '我是最棒哒！！！'
         managed = False
